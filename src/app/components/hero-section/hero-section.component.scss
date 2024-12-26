@@ -1,0 +1,65 @@
+.home-section {
+  background-image: url("/images/banner-hero.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 32px;
+}
+
+.wrapper-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  width: 100%;
+  text-align: center;
+
+  div {
+    color: var(--white);
+    padding: 0 0 20px 20px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 1.1;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: var(--gray);
+    }
+  }
+
+  img {
+    height: 280px;
+    z-index: 1;
+    border-radius: 50%;
+    border: 6px solid var(--orange);
+    background-color: var(--gray);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-section {
+    gap: 100px;
+    padding: 0 90px;
+  }
+
+  .wrapper-profile {
+    flex-direction: row;
+    text-align: left;
+
+    div {
+      padding: 0 0 140px 20px;
+    }
+
+    img {
+      height: 340px;
+    }
+  }
+}

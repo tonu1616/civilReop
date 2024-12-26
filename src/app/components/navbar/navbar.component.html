@@ -1,0 +1,21 @@
+<nav class="header">
+  <a routerLink="/">
+    <!-- <img src="/svgs/primary-logo.svg" alt="Logo ERF" class="logo" /> -->
+    <img src="/images/LOGO.jpeg" alt="Sony Enterprices" class="logo" />
+    <h4 style="float: right ; margin-left: 2px; color: aliceblue;">Sony Enterprices</h4>
+  </a>
+  <button class="menu" (click)="onToggleMenu()">
+    <app-svg-icon iconName="menu" [height]="32" [width]="32" fill="#FFF" />
+  </button>
+  <div class="mobile-menu" *ngIf="isShowMenu$ | async">
+    @for (item of navbarList; track item.name) {
+    <a [href]="'#' + item.location" (click)="onToggleMenu()">{{ item.name }}</a>
+    }
+  </div>
+  <ul class="navbar">
+    @for (item of navbarList; track item.location) {
+    <app-navbar-item [location]="item.location" [name]="item.name">
+    </app-navbar-item>
+    }
+  </ul>
+</nav>

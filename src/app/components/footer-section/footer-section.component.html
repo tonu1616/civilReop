@@ -1,0 +1,31 @@
+<section class="call-me-section">
+  <div class="section">
+    <h1>We Are Available</h1>
+    <a [href]="whatsappLink">
+      <app-button color="tertiary">Get contact Details</app-button>
+    </a>
+  </div>
+ 
+  <div class="section">
+    <p style="text-align: center;">HEAD OFFICE ADDRESS- PLOT NO.-401
+      LAL GANG ROAD 
+      NEAR OXFORD SCHOOLARA PATNA ROAD, SASARAM BIHAR  – 821115
+      CORPORATE OFFICE ADDRESS- DALMIA CEMENT BANJARI   KAYANPUR BIHAR 821303
+      EMAIL ID- "SONY.ENTERPRISES92GMAIL.COM
+      MOBILE NO- "8651488371, 9102673991"
+
+      </p>
+  </div>
+</section>
+<section class="footer-section">
+  <div class="section">
+    <div class="contact-list">
+      @for (item of contactList; track item.icon) {
+      <a [href]="item.link" target="_blank">
+        <app-svg-icon [iconName]="item.icon" [height]="16" [width]="16" />
+      </a>
+      }
+    </div>
+    <p>Copyright ©{{ currentYear }} | Sony Enterprices construction </p>
+  </div>
+</section>
